@@ -65,6 +65,7 @@ int main() {
     if (!readCameraParameters("CameraCalibration.txt", cameraMatrix,
                               distCoeffs)) {
         throw "Camera Parameters didn't load";
+        std::abort();
     }
 
     cv::Ptr<cv::aruco::Dictionary> dictionary =
